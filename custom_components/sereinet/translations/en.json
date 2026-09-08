@@ -1,0 +1,18 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Sereinet",
+        "description": "Create a signed SERN ingress. Keep the signing key private.",
+        "data": {
+          "name": "Name",
+          "signing_key": "Signing key",
+          "webhook_id": "Ingress ID (copy this value)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Sereinet is already configured."
+    }
+  }
+}

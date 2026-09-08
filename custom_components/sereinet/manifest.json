@@ -1,0 +1,14 @@
+{
+  "domain": "sereinet",
+  "name": "Sereinet",
+  "codeowners": ["@Kaotikking"],
+  "config_flow": true,
+  "dependencies": ["http"],
+  "documentation": "https://github.com/Kaotikking/sereinet-haos",
+  "integration_type": "hub",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/Kaotikking/sereinet-haos/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
+
