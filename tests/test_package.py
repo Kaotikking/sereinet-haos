@@ -25,6 +25,13 @@ class PackageTests(unittest.TestCase):
                 for value in forbidden:
                     self.assertNotIn(value, text, f"{value} leaked in {path}")
 
+    def test_router_is_registered_as_authenticated_no_effect_api(self):
+        setup = (ROOT / "custom_components/sereinet/__init__.py").read_text()
+        self.assertIn('url = "/api/sereinet/v1/router/evaluate"', setup)
+        self.assertIn("requires_auth = True", setup)
+        self.assertIn('"authority_effect": "NONE"', setup)
+        self.assertIn("morphworld_foundation_policy", setup)
+
 
 if __name__ == "__main__":
     unittest.main()
