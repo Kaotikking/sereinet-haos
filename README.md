@@ -59,3 +59,7 @@ Run the dependency-free contract tests with:
 ```text
 python -m unittest discover -s tests -v
 ```
+
+## SERN Router foundation
+
+Version 1.1 adds a generic, default-deny SERN control-plane router. Routes must be explicitly admitted, expire automatically, and may project only the allowed nine-Core mask. The reserved `OPEN_TRANSPORT` signal is denied until a separate transport is admitted. Morph lifecycle and DNA policy remain exclusively in MorphDomain.
