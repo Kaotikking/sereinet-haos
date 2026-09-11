@@ -31,6 +31,7 @@ class PackageTests(unittest.TestCase):
         self.assertIn("requires_auth = True", setup)
         self.assertIn('"authority_effect": "NONE"', setup)
         self.assertIn("morphworld_foundation_policy", setup)
+        self.assertIn("local_only=False", setup)
 
 
 if __name__ == "__main__":
