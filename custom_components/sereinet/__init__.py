@@ -89,6 +89,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     webhook.async_register(
         hass, DOMAIN, entry.title, entry.data[CONF_WEBHOOK_ID], handle_webhook,
         allowed_methods=["POST"],
+        local_only=False,
     )
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
