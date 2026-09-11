@@ -12,7 +12,7 @@ class PackageTests(unittest.TestCase):
         manifest = json.loads((ROOT / "custom_components/sereinet/manifest.json").read_text())
         hacs = json.loads((ROOT / "hacs.json").read_text())
         self.assertEqual(manifest["domain"], "sereinet")
-        self.assertEqual(manifest["version"], "1.1.0")
+        self.assertEqual(manifest["version"], "1.1.1")
         self.assertEqual(hacs["name"], "Sereinet")
 
     def test_no_private_values(self):
